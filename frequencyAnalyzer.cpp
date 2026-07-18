@@ -28,7 +28,10 @@ int main(){
     }
 
     sort(f.begin(), f.end(), [](const Frequency& a, const Frequency& b){
-        return a.count>b.count;
+        if(a.count!=b.count){
+            return a.count > b.count;
+        }
+            return a.ch < b.ch;
     });
 
     for( const auto& item: f){
