@@ -1,6 +1,6 @@
 //directly try to create frequency table
 #include<iostream>
-#include<string.h>
+#include<string>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -17,7 +17,7 @@ int main(){
     getline(cin, message);
 
     for (char ch: message){
-        frequency[ch]++;
+        frequency[static_cast<unsigned char>(ch)]++;
     }
 
     for( int i = 0; i < 256; i++){
@@ -31,9 +31,9 @@ int main(){
         return a.count>b.count;
     });
 
-    for( int i = 0; i < f.size(); i++){
-        cout << f[i].ch << " : " << f[i].count << endl;
+    for( const auto& item: f){
+        cout << item.ch << " : " << item.count << endl;
     }
-    
+
     return 0;
 }
