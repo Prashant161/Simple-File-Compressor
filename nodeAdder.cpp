@@ -37,5 +37,26 @@ int main(){
     for( const auto& item: f){
         cout << item.ch << " : " << item.count << endl;
     }
+    //finding two smallest nodes and adding them. 
+    int vectorSize;
+    vectorSize = f.size();
+    cout << vectorSize << endl;
+    while(vectorSize-2>=0){
+        f[vectorSize-2].count+=f[vectorSize-1].count;
+        f[vectorSize-2].ch = '*';
+        f.erase(f.begin()+vectorSize-1);
+        cout << "current frequency table: " << endl;
+         sort(f.begin(), f.end(), [](const Frequency& a, const Frequency& b){
+        if(a.count!=b.count){
+            return a.count > b.count;
+        }
+            return a.ch < b.ch;
+    });
+        for( const auto& item: f){
+        cout << item.ch << " : " << item.count << endl;
+        
+    }
+    vectorSize--;
+    }
     return 0;
 }
