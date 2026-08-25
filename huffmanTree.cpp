@@ -10,7 +10,17 @@ struct Frequency {
     Frequency* left = nullptr;
     Frequency* right = nullptr;
 };
+void generateCodes(Frequency* node, string code)
+    {
+        if (node->left == nullptr && node->right == nullptr)
+        {
+            cout << node->ch << " : " << code << endl;
+            return;
+        }
 
+        generateCodes(node->left, code + "0");
+        generateCodes(node->right, code + "1");
+    }
 int main() {
 
     int frequency[256] = {0};
@@ -84,17 +94,20 @@ int main() {
             });
         }
         Frequency* root = nodes[0];
-//     test print code 
+        generateCodes(root, "");
+// //     test print code 
 //     for (const auto& item : nodes) {
 //         cout << item->ch << " : " << item->count << endl;
 //     }
 //     cout << "Root: " << root->ch << " : " << root->count << endl;
 
-// cout << "Left: " << root->left->ch
+//     cout << "Left: " << root->left->ch
 //      << " : " << root->left->count << endl;
 
-// cout << "Right: " << root->right->ch
+//     cout << "Right: " << root->right->ch
 //      << " : " << root->right->count << endl;
+
+//encoding
 
     return 0;
 }
