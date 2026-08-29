@@ -69,7 +69,7 @@ int main() {
         // Create their parent
         Frequency* parent = new Frequency;
 
-        parent->ch = '*';
+        parent->ch = '\0';
         parent->count = left->count + right->count;
 
         parent->left = left;
@@ -108,6 +108,5 @@ int main() {
 //      << " : " << root->right->count << endl;
 
 //encoding
-
     return 0;
 }
