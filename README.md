@@ -15,7 +15,6 @@ A simple file compression utility written in C++ using the **Huffman Coding** al
 ### Compile
 
 g++ huffmanEncoding.cpp -o huffmanEncoding
-````
 ### Logic
 ```
 (to compress use 'c')
@@ -47,6 +46,3 @@ Example:
 ```bash
 .\huffmanEncoding.exe -d sample.huff restored.txt
 ```
-
-The decompressed file should contain the same data as the original file.
-
