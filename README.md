@@ -1,6 +1,4 @@
-Absolutely. Your repository is clean now, so I'd keep the README equally simple.
 
-````markdown
 # Simple File Compressor
 
 A simple file compression utility written in C++ using the **Huffman Coding** algorithm.
