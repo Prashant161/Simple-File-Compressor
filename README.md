@@ -8,7 +8,6 @@ A simple file compression utility written in C++ using the **Huffman Coding** al
 - **huffmanEncoding.cpp** — Main program for compressing and decompressing files using Huffman coding.
 - **sampleFile.txt** — Sample input file used for testing the compressor.
 - **learnings/** — Contains intermediate programs and experiments developed while learning and building the compression system.
-- **.gitignore** — Specifies files that should not be tracked by Git.
 
 ## User Manual
 
