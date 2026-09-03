@@ -1,4 +1,54 @@
-# Simple File compressor
-- Frequency_analyzer_naive is a program that counts the frequency of characters with in a file using basic/foundational logic: dynamic array of characters, with a reference array that checks if the loop already visited the same character or not to ensure it doesn't count for duplicate values different times. 
+Absolutely. Your repository is clean now, so I'd keep the README equally simple.
 
-- Frequency_analyzer_optimized program uses advanced concepts like vectors for dynamic structure, lambda sorting function, and range-based for loop. It also uses a tie breaker for same number of frequency, sorting characters in ascending order. 
+````markdown
+# Simple File Compressor
+
+A simple file compression utility written in C++ using the **Huffman Coding** algorithm.
+
+## Project Structure
+
+- **huffmanEncoding.cpp** — Main program for compressing and decompressing files using Huffman coding.
+- **sampleFile.txt** — Sample input file used for testing the compressor.
+- **learnings/** — Contains intermediate programs and experiments developed while learning and building the compression system.
+- **.gitignore** — Specifies files that should not be tracked by Git.
+
+## User Manual
+
+### Compile
+
+g++ huffmanEncoding.cpp -o huffmanEncoding
+````
+### Logic
+```
+(to compress use 'c')
+.\exe -c  INPUT_FILE.txt  OUTPUT_FILE.huff 
+
+(to decompress use 'd')
+.\exe -d  INPUT_FILE.huff  OUTPUT_FILE.txt 
+```
+### Compress a File
+
+```bash
+.\huffmanEncoding.exe -c <input_file> <output_file.huff>
+```
+
+Example:
+
+```bash
+.\huffmanEncoding.exe -c sampleFile.txt sample.huff
+```
+
+### Decompress a File
+
+```bash
+.\huffmanEncoding.exe -d <input_file.huff> <output_file>
+```
+
+Example:
+
+```bash
+.\huffmanEncoding.exe -d sample.huff restored.txt
+```
+
+The decompressed file should contain the same data as the original file.
+
